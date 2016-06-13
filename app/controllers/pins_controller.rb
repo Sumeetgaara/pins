@@ -2,6 +2,7 @@ class PinsController < ApplicationController
 	before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 	before_action :authenticate_user!, except: [:index, :show]
 
+
 	def index
 		@pins = Pin.all.order("created_at DESC")
 	end
@@ -24,6 +25,7 @@ class PinsController < ApplicationController
 	end
 
 	def edit
+		
 	end
 
 	def update
@@ -52,6 +54,8 @@ class PinsController < ApplicationController
 
 	def find_pin
 		@pin = Pin.find(params[:id])
+		
 	end
+
 
 end
