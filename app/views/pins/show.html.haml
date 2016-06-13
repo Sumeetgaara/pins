@@ -1,5 +1,7 @@
 %h1= @pin.title
 %p=@pin.description
+%p Posted by
+=@pin.user.email
 
 
 = link_to "Back", root_path
